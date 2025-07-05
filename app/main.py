@@ -11,6 +11,13 @@ class XPad(QtWidgets.QMainWindow):
         self.setWindowIcon(QtGui.QIcon(f'{path.join(path.dirname(argv[0]))}/icons/icon.png'))
         self.showMaximized()
 
+        self.menu_bar = QtWidgets.QMenuBar(self)
+        self.setMenuBar(self.menu_bar)
+        self.menu_bar.addMenu('Settings')
+        miscellaneous = self.menu_bar.addMenu('Miscellaneous')
+        miscellaneous.addAction('GitHub repository')
+        miscellaneous.addAction('License')
+
 
 
 application = QtWidgets.QApplication(argv)
