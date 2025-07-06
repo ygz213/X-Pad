@@ -1,5 +1,6 @@
 from os import path
 from sys import argv
+from webbrowser import open_new_tab
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
@@ -14,7 +15,7 @@ class XPad(QtWidgets.QMainWindow):
         self.menu_bar.addMenu('Settings')
         self.setMenuBar(self.menu_bar)
         miscellaneous = self.menu_bar.addMenu('Miscellaneous')
-        miscellaneous.addAction('GitHub repository')
+        miscellaneous.addAction('GitHub repository', lambda: open_new_tab('https://github.com/ygz213/X-Pad'))
         miscellaneous.addAction('License')
         self.draw_widgets()
 
