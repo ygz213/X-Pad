@@ -1,5 +1,4 @@
 ![latest release](https://img.shields.io/github/v/release/ygz213/X-Pad?style=flat-square "latest release")
-![license](https://img.shields.io/github/license/ygz213/X-Pad?style=flat-square "license")
 
 ![](app/icons/icon.png)
 

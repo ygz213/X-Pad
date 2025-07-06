@@ -60,7 +60,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ----------
 
-But this project GPLv3-licensed PyQt6 module (by Riverbank Computing Limited) and all X-Pad files are released under GPLv3:
+But this project is based on the GPLv3-licensed PyQt6 module (by Riverbank Computing Limited) and all X-Pad files are released under GPLv3:
 
 ----------
                     GNU GENERAL PUBLIC LICENSE
