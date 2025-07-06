@@ -29,4 +29,6 @@ Feel free to send a pull request or open an issue.
 ## Credits
 
 - berkahicon for [notebook icon](https://www.flaticon.com/free-icon/notebook_828368)
-- popo2021 for [x letter icon](https://www.flaticon.com/free-icon/letter-x_8207032) (Icons made by berkacihon and popo2021 from www.flaticon.com)
+- popo2021 for [x letter icon](https://www.flaticon.com/free-icon/letter-x_8207032) 
+- meaicon for [new note icon](https://www.flaticon.com/free-icon/edit_16905031)
+- smashingstocks for [new folder icon](https://www.flaticon.com/free-icon/add-folder_5382809) (Icons made by berkacihon, popo2021, meaicon and smashingstocks from www.flaticon.com)
