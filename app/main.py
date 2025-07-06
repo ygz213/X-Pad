@@ -22,14 +22,14 @@ class XPad(QtWidgets.QMainWindow):
     def draw_widgets(self):
         main_frame = QtWidgets.QWidget(self)
         self.setCentralWidget(main_frame)
-        layout = QtWidgets.QGridLayout(main_frame)
-        main_frame.setLayout(layout)
+        main_layout = QtWidgets.QGridLayout(main_frame)
+        main_frame.setLayout(main_layout)
 
         self.notes = QtWidgets.QTreeWidget(self)
         self.notes.setHeaderHidden(True)
         self.notes.setContextMenuPolicy(QtCore.Qt.ContextMenuPolicy.CustomContextMenu)
         self.notes.customContextMenuRequested.connect(self.show_context_menu)
-        layout.addWidget(self.notes)
+        main_layout.addWidget(self.notes)
 
         button_layout = QtWidgets.QVBoxLayout()
 
@@ -49,7 +49,7 @@ class XPad(QtWidgets.QMainWindow):
 
         buttons_frame = QtWidgets.QWidget(self)
         buttons_frame.setLayout(button_layout)
-        layout.addWidget(buttons_frame, 0, 1, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
+        main_layout.addWidget(buttons_frame, 0, 1, alignment=QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.showMaximized()
 
