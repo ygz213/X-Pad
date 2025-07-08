@@ -21,10 +21,10 @@ class XPad(QtWidgets.QMainWindow):
         self.setWindowTitle('X-Pad')
         self.setWindowIcon(QtGui.QIcon(f'{path.join(path.dirname(argv[0]))}/icons/icon.png'))
 
-        self.menu_bar = QtWidgets.QMenuBar(self)
-        self.menu_bar.addMenu('Settings')
-        self.setMenuBar(self.menu_bar)
-        miscellaneous = self.menu_bar.addMenu('Miscellaneous')
+        menu_bar = QtWidgets.QMenuBar(self)
+        menu_bar.addMenu('Settings')
+        self.setMenuBar(menu_bar)
+        miscellaneous = menu_bar.addMenu('Miscellaneous')
         miscellaneous.addAction('GitHub repository', lambda: open_new_tab('https://github.com/ygz213/X-Pad'))
         miscellaneous.addAction('License', lambda: open_license_file())
         self.draw_widgets()
@@ -44,19 +44,19 @@ class XPad(QtWidgets.QMainWindow):
 
         button_layout = QtWidgets.QVBoxLayout()
 
-        self.new_note = QtWidgets.QPushButton('     New note...', self)
-        self.new_note.setIcon(QtGui.QIcon(f'{path.join(path.dirname(argv[0]))}/icons/new_note.png'))
-        self.new_note.setIconSize(QtCore.QSize(20, 20))
-        self.new_note.setFixedHeight(35)
-        self.new_note.setFixedWidth(125)
-        button_layout.addWidget(self.new_note)
+        new_note = QtWidgets.QPushButton('     New note...', self)
+        new_note.setIcon(QtGui.QIcon(f'{path.join(path.dirname(argv[0]))}/icons/new_note.png'))
+        new_note.setIconSize(QtCore.QSize(20, 20))
+        new_note.setFixedHeight(35)
+        new_note.setFixedWidth(125)
+        button_layout.addWidget(new_note)
 
-        self.new_folder = QtWidgets.QPushButton('     New folder...', self)
-        self.new_folder.setIcon(QtGui.QIcon(f'{path.join(path.dirname(argv[0]))}/icons/new_folder.png'))
-        self.new_folder.setIconSize(QtCore.QSize(20, 20))
-        self.new_folder.setFixedHeight(35)
-        self.new_folder.setFixedWidth(125)
-        button_layout.addWidget(self.new_folder)
+        new_folder = QtWidgets.QPushButton('     New folder...', self)
+        new_folder.setIcon(QtGui.QIcon(f'{path.join(path.dirname(argv[0]))}/icons/new_folder.png'))
+        new_folder.setIconSize(QtCore.QSize(20, 20))
+        new_folder.setFixedHeight(35)
+        new_folder.setFixedWidth(125)
+        button_layout.addWidget(new_folder)
 
         buttons_frame = QtWidgets.QWidget(self)
         buttons_frame.setLayout(button_layout)
@@ -77,7 +77,6 @@ class XPad(QtWidgets.QMainWindow):
         #delete_action.triggered.connect()
         context_menu.addAction(delete_action)
         context_menu.exec(self.notes.viewport().mapToGlobal(position))
-
 
 
 application = QtWidgets.QApplication(argv)
