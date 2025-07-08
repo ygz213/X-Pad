@@ -1,8 +1,18 @@
-from os import path
-from sys import argv
+from os import path, startfile
+from subprocess import call
+from sys import argv, platform
 from webbrowser import open_new_tab
 from PyQt6 import QtCore, QtGui, QtWidgets
 
+
+
+def open_license_file():
+    if platform == 'win32':
+        startfile(f'{path.join(path.dirname(argv[0]))[:-4]}/LICENSE')
+    elif platform == 'darwin':
+        call(['open', f'{path.join(path.dirname(argv[0]))[:-4]}/LICENSE'])
+    else:
+        call(['xdg-open', f'{path.join(path.dirname(argv[0]))[:-4]}/LICENSE'])
 
 
 class XPad(QtWidgets.QMainWindow):
@@ -16,7 +26,7 @@ class XPad(QtWidgets.QMainWindow):
         self.setMenuBar(self.menu_bar)
         miscellaneous = self.menu_bar.addMenu('Miscellaneous')
         miscellaneous.addAction('GitHub repository', lambda: open_new_tab('https://github.com/ygz213/X-Pad'))
-        miscellaneous.addAction('License')
+        miscellaneous.addAction('License', lambda: open_license_file())
         self.draw_widgets()
 
 
